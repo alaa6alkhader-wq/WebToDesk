@@ -4,7 +4,7 @@
 
 const config = {
   // Main Application URL
-  websiteUrl: "http://idriss.iba.rf.gd",
+  https://cool-tulumba-fa103a.netlify.app,
 
   // Application Name
   appName: "WebToDesk",
