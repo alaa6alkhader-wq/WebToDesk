@@ -21,10 +21,17 @@ jobs:
         npm install --legacy-peer-deps || npm install
 
     - name: Build EXE Package
-      run: npm run build --if-present
+      run: |
+        npm run build --if-present
+        npm run package --if-present
 
     - name: Upload EXE Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Windows-Desktop-App
-        path: dist/
+        path: |
+          dist/**/*.exe
+          out/**/*.exe
+          *.exe
+          dist/
+          out/
