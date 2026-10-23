@@ -23,15 +23,13 @@ jobs:
     - name: Build EXE Package
       run: |
         npm run build --if-present
-        npm run package --if-present
+        npx electron-builder --windows
 
     - name: Upload EXE Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Windows-Desktop-App
         path: |
-          dist/**/*.exe
-          out/**/*.exe
+          dist/*.exe
+          out/*.exe
           *.exe
-          dist/
-          out/
